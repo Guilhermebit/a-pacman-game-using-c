@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "headers/game_logic.h"
 #include "headers/game_data.h"
 #include "configs/system_macros.h"
@@ -39,6 +40,8 @@ void handleUserInput(char *key) {
 	*key = getchImpl();
 	fflush(stdin);
 	printf("%c", *key);
+	// Convert the char to lowercase
+	*key = tolower(*key);
 	printf("\n");
 }
 

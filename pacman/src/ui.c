@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include "headers/ui.h"
 #include "headers/game_data.h"
 #include "configs/system_macros.h"
@@ -102,7 +103,7 @@ void showGameControls() {
 	printf("Move Up    : Press 'w'\n");
 	printf("Move Down  : Press 's'\n");
     printf("Move Right : Press 'd'\n");
-    printf("Bomb  	   : Press 'b'\n");
+    printf("Bomb       : Press 'b'\n");
 	printf("\n");
 }
 
@@ -175,9 +176,10 @@ void displayGameOverMenu(enum GameStatus *gameStatus) {
 	   printf(MENU_COLOR "Enter a valid choice: \n");
 	   char option = getchImpl();
 	   fflush(stdin);
+	    // Convert the char to lowercase
+	   option = tolower(option);
 
 	   switch(option) {
-			   case 'R':
 		       case 'r':
 		           destroyGameData();
 		           startGame();
@@ -188,7 +190,6 @@ void displayGameOverMenu(enum GameStatus *gameStatus) {
 		   	       displayMainMenu();
 		   	       *gameStatus = EXIT_GAME;
 		   	   break;
-			   case 'E':
 		       case 'e':
 			   	    *gameStatus = EXIT_GAME;
 			   break;
