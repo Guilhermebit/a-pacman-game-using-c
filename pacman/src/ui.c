@@ -96,10 +96,21 @@ char pacmanDrawingFacingRight[HEIGHT][WIDTH] = {
 	{" '--' " }
 };
 
+void showGameControls() {
+	printf("\nGame Controls:\n\n");
+	printf("Move Left  : Press 'a'\n");
+	printf("Move Up    : Press 'w'\n");
+	printf("Move Down  : Press 's'\n");
+    printf("Move Right : Press 'd'\n");
+    printf("Bomb  	   : Press 'b'\n");
+	printf("\n");
+}
+
 void showCredits() {
     printf(MENU_CREDITS_COLOR "\nCredits:\n\n");
     printf("Developed by: %s\n", GAME_AUTHOR);
-    printf("Version: %s\n\n", GAME_VERSION);
+    printf("Version: %s\n", GAME_VERSION);
+	printf("\n");
 }
 
 void displayMainMenu() {
@@ -119,10 +130,10 @@ void displayMainMenu() {
 
 	printf("=========== Pac-Man Game ===========\n");
     printf("1. Start Game\n");
-    //printf("2. Options\n");
+    printf("2. Game Controls\n");
     //printf("3. High Scores\n");
-	printf("2. Credits\n");
-    printf("3. Exit\n");
+	printf("3. Credits\n");
+    printf("4. Exit\n");
     printf("=========================================\n");
 
 	do {
@@ -136,6 +147,9 @@ void displayMainMenu() {
             case START_OPTION:
                 startGame();
 				exitGame = true;
+                break;
+			case GAME_CONTROLS_OPTION:
+                showGameControls();
                 break;
             case CREDITS_OPTION:
                 showCredits();
@@ -163,7 +177,7 @@ void displayGameOverMenu(enum GameStatus *gameStatus) {
 	   fflush(stdin);
 
 	   switch(option) {
-		       case 'R':
+			   case 'R':
 		       case 'r':
 		           destroyGameData();
 		           startGame();

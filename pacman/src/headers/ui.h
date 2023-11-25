@@ -8,6 +8,7 @@ struct GameData; // Forward declaration
 typedef enum MenuOption {
     INVALID_OPTION = -1,
     START_OPTION = 1,
+    GAME_CONTROLS_OPTION,
     CREDITS_OPTION,
     EXIT_OPTION
 } MenuOption;
@@ -18,6 +19,7 @@ typedef enum GameStatus {
 } GameStatus;
 
 // Game menu
+void showGameControls();
 void showCredits();
 void displayMainMenu();
 void displayGameOverMenu(enum GameStatus *gameStatus);
