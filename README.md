@@ -8,12 +8,14 @@ A **Pac-Man** Game developed in **C** language
 
 ### Pac-Man Game
 
-![screenshot_pacman_game](https://github.com/Guilhermebit/spring-boot-api/assets/33499379/a81dd6a9-2fd1-4a15-8c8e-6ed89adf2ed8)
+![screenshot_pacman_game](https://github.com/user-attachments/assets/aabc40db-845c-446d-a0e4-af8c828ab52a)
+
 
 ### Debug Mode
-![screenshot_pacman_debug](https://github.com/Guilhermebit/spring-boot-api/assets/33499379/6254a99d-00ca-4c97-8a2a-06b3c1cdcfc4)
+![screenshot_pacman_debug](https://github.com/user-attachments/assets/878a56fd-2f57-478c-a2f0-e3af331cc71d)
 
-![screenshot_pacman_assert](https://github.com/Guilhermebit/spring-boot-api/assets/33499379/783abea7-2236-44d7-b972-a8c7e3af8f2d)
+![screenshot_pacman_assert](https://github.com/user-attachments/assets/5c4d60f9-c89b-4164-8734-c348b3ad116e)
+
 
 ## :cloud: Overview
 This project was developed with the aim of obtaining a better understanding of some concepts in the C language, such as:
