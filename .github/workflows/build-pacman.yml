@@ -1,0 +1,29 @@
+name: Build Pacman Game with Make
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Update package lists
+      run: sudo apt update
+
+    - name: Install Make
+      run: sudo apt install -y make
+
+    - name: Install GCC
+      run: sudo apt install -y gcc
+
+    - name: Build and Clean the project
+      run: |
+        cd pacman
+        make all
+        make clean
